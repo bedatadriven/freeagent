@@ -1,0 +1,16 @@
+
+
+repositories {
+  mavenCentral()
+  jcenter()
+}
+
+
+apply plugin: 'java'
+
+dependencies {
+  compile  'com.google.guava:guava:28.2-jre'
+  compile('com.google.api-client:google-api-client-appengine:1.23.0') {
+    exclude group: 'com.google.guava'
+  }
+}
